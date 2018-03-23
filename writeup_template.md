@@ -13,6 +13,9 @@ The goals / steps of this project are the following:
 [//]: # (Image References)
 
 [image1]: ./examples/cnn-architecture-624x890.png "Model Visualization"
+[image3]: ./examples/left_2016_12_01_13_46_38_947.jpg "left camera image"
+[image4]: ./examples/center_2016_12_01_13_46_38_947.jpg "center camera image"
+[image5]: ./examples/right_2016_12_01_13_46_38_947.jpg "right camera image"
 
 
 ## Rubric Points
@@ -103,7 +106,14 @@ The final model architecture (model.py lines 18-24) consisted of a convolution n
 
 I used the sample data from udacity lecture. As the majority (80%) of the data consists of the straight driving, (with steering angle less than 0.05), I used 20% of them so that the data set can be balanced. 
 
-For every position I also used left and right cameras of the car. For the left camera image I added 0.2 to the steering angle whereas for the right camera image I substracted 0.2 from the original angle.
+
+For every position I also used left and right cameras of the car. For the left camera image I added 0.2 to the steering angle whereas for the right camera image I substracted 0.2 from the original angle. (model.py line 38, 44).
+
+Here is the example of three camera images from left, center and right at the same sample time.
+
+![alt text][image3]
+![alt text][image4]
+![alt text][image5]
 
 To augment the data set, I also flipped images and angles thinking that this would make the data more generalized.
 
